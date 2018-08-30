@@ -43,7 +43,7 @@ module.exports = function(RED) {
       callService(sessionClient)(msg.payload, sessionPath, config.language)
         .then(normalizeOutput(msg))
         .then(output => node.send(output))
-        .catch(e => node.error(`Detect Intent Error: ${e.message}`, msg))
+        .catch(e => node.error(`[dialogflow detect intent] error: ${e.message}`, msg))
     );
   });
 };
