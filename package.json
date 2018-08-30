@@ -1,0 +1,20 @@
+{
+  "name": "node-red-contrib-dialogflow-apiv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red" : {
+    "nodes": {
+      "dialogflow-detect-intent": "dialogflow-detect-intent.js",
+      "google-cloud-credentials": "google-cloud-credentials.js"
+    }
+  },
+  "author": "Edu Mosqueda (@bbaaxx)",
+  "license": "ISC",
+  "dependencies": {
+    "dialogflow": "^0.6.0"
+  }
+}

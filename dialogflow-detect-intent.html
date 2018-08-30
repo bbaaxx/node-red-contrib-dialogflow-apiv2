@@ -1,0 +1,38 @@
+<!-- dialogflow-detect-intent -->
+<script type="text/javascript">
+  RED.nodes.registerType('dialogflow-detect-intent',{
+    category: 'function',
+    color: '#a6bbcf',
+    defaults: {
+      name: { value: "" },
+      language: { value: "en-US", required: true },
+      gcpcreds: { value: "", type: "google-cloud-credentials", required: true }
+    },
+    inputs:1,
+    outputs:1,
+    icon: "file.png",
+    label: function() {
+      return this.name || "dialogflow-detect-intent";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="dialogflow-detect-intent">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-language"><i class="icon-tag"></i> Language Code</label>
+        <input type="text" id="node-input-language" placeholder="Language Code">
+    </div>
+    <div class="form-row">
+        <label for="node-input-gcpcreds"><i class="icon-tag"></i> Credentials</label>
+        <input type="text" id="node-input-gcpcreds" placeholder="GCP Credentials Config">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="dialogflow-detect-intent">
+    <p>A wrpper for Dialogflow's `detect intent` service </p>
+    <p>It will take a string in msg.payload and will return the NLP' response in plain text</p>
+</script>
