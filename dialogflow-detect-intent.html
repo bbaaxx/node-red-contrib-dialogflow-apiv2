@@ -1,8 +1,8 @@
 <!-- dialogflow-detect-intent -->
 <script type="text/javascript">
   RED.nodes.registerType('dialogflow-detect-intent',{
-    category: 'function',
-    color: '#a6bbcf',
+    category: 'Dialogflow API v2',
+    color: '#ef6c00',
     defaults: {
       name: { value: "" },
       language: { value: "en-US", required: true },
@@ -12,7 +12,7 @@
     outputs:1,
     icon: "dfico.png",
     label: function() {
-      return this.name || "Dialogflow (v2) detect intent";
+      return this.name || "Detect intent";
     }
   });
 </script>
