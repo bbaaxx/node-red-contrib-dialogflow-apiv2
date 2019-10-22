@@ -16,7 +16,7 @@ const makeRequest = (textQuery, sessionPath, languageCode) => ({
 // adds a nlpMetadata object with the already treated message
 const normalizeOutput = msg => nlpResult => ({
   ...msg,
-  payload: nlpResult.fulfillmentText,
+  payload: nlpResult,
   nlpResult
 });
 
